@@ -237,17 +237,92 @@
 # window.mainloop()
 
 # # %%%%%%%%%%%%%%%%%%%%% #
-# # --     SLIDE 27    -- #
+# # --     SLIDE 33    -- #
 # # %%%%%%%%%%%%%%%%%%%%% #
+# def power_factory(exponent):
+#     def power(base):
+#         return base**exponent
+
+#     return power
+
+
+# # Create square and cube functions
+# square = power_factory(2)
+# cube = power_factory(3)
+
+# print(square(4))  # 16
+# print(cube(4))  # 64
+
 # # %%%%%%%%%%%%%%%%%%%%% #
-# # --     SLIDE 27    -- #
+# # --     SLIDE 34    -- #
 # # %%%%%%%%%%%%%%%%%%%%% #
+# def make_counter():
+#     count = 0
+
+#     def counter():
+#         nonlocal count
+#         count += 1
+#         return count
+
+#     return counter
+
+
+# counter_a = make_counter()
+# counter_b = make_counter()
+
+# print(counter_a())  # 1
+# print(counter_a())  # 2
+# print(counter_b())  # 1
+
 # # %%%%%%%%%%%%%%%%%%%%% #
-# # --     SLIDE 27    -- #
+# # --     SLIDE 35    -- #
 # # %%%%%%%%%%%%%%%%%%%%% #
+# def secure_access(data):
+#     def access(key):
+#         if key == "secret_key":
+#             return data
+#         else:
+#             return "Access Denied"
+
+#     return access
+
+
+# data_access = secure_access("Sensitive Data")
+# print(data_access("wrong_key"))  # Access Denied
+# print(data_access("secret_key"))  # Sensitive Data
+
+
 # # %%%%%%%%%%%%%%%%%%%%% #
-# # --     SLIDE 27    -- #
+# # --     SLIDE 36    -- #
 # # %%%%%%%%%%%%%%%%%%%%% #
+# def setup_callback(prefix):
+#     def callback(message):
+#         print(f"{prefix}: {message}")
+
+#     return callback
+
+
+# success_callback = setup_callback("Success")
+# failure_callback = setup_callback("Failure")
+
+# # Simulate invoking callbacks
+# success_callback("Operation completed")  # Success: Operation completed
+# failure_callback("An error occurred")  # Failure: An error occurred
+
 # # %%%%%%%%%%%%%%%%%%%%% #
-# # --     SLIDE 27    -- #
+# # --     SLIDE 37    -- #
 # # %%%%%%%%%%%%%%%%%%%%% #
+# # standard function
+# def function_example():
+#     print("This is a function.")
+
+
+# # assign the function to a variable
+# f = function_example
+
+# #lambda
+# add = lambda x, y: x + y
+
+# print(callable(function_example))  # True
+# print(callable(f))  # True
+# print(callable(add))  # True
