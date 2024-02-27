@@ -1,7 +1,6 @@
 # # %%%%%%%%%%%%%%%%%%%%% #
-# # --     SLIDE 47    -- #
+# # --     SLIDE 7    -- #
 # # %%%%%%%%%%%%%%%%%%%%% #
-
 # # Define the number for which to calculate the factorial
 # number = 5
 
@@ -15,11 +14,9 @@
 # # Print the result
 # print(f"The factorial of {number} is {factorial}")
 
-
 # # %%%%%%%%%%%%%%%%%%%%% #
-# # --     SLIDE 49    -- #
+# # --     SLIDE 9     -- #
 # # %%%%%%%%%%%%%%%%%%%%% #
-
 # # Function to get dimensions of the rectangle
 # def get_dimensions():
 #     length = float(input("Enter the length: "))
@@ -48,22 +45,19 @@
 # if __name__ == "__main__":
 #     main()
 
-
 # # %%%%%%%%%%%%%%%%%%%%% #
-# # --     SLIDE 52    -- #
+# # --     SLIDE 13    -- #
 # # %%%%%%%%%%%%%%%%%%%%% #
-
 # def greet(name):
 #     return f"Hello, {name}!"
 
-
-# say_hello = greet
-# print(say_hello("Alice"))  # Hello, Alice!
+# my_variable = greet
+# print(type(my_variable))  # <class 'function'>
+# print(my_variable("Alice"))  # Hello, Alice!
 
 # # %%%%%%%%%%%%%%%%%%%%% #
-# # --     SLIDE 53    -- #
+# # --     SLIDE 14    -- #
 # # %%%%%%%%%%%%%%%%%%%%% #
-
 # def shout(text):
 #     return text.upper() + "!"
 
@@ -82,9 +76,8 @@
 # print(greet(whisper, "Eve"))  # hello, eve...
 
 # # %%%%%%%%%%%%%%%%%%%%% #
-# # --     SLIDE 54    -- #
+# # --     SLIDE 15    -- #
 # # %%%%%%%%%%%%%%%%%%%%% #
-
 # def make_multiplier(factor):
 #     def multiplier(number):
 #         return number * factor
@@ -96,13 +89,12 @@
 # doubler = make_multiplier(2)
 # tripler = make_multiplier(3)
 
-# print(doubler(5))  # Output: 10
-# print(tripler(5))  # Output: 15
+# print(doubler(5))  # 10
+# print(tripler(5))  # 15
 
 # # %%%%%%%%%%%%%%%%%%%%% #
-# # --     SLIDE 55    -- #
+# # --     SLIDE 16    -- #
 # # %%%%%%%%%%%%%%%%%%%%% #
-
 # def add(x, y):
 #     return x + y
 
@@ -112,29 +104,46 @@
 
 
 # operations = [add, subtract]
-# print(operations[0](5, 3))  # Output: 8 (addition)
-# print(operations[1](5, 3))  # Output: 2 (subtraction)
+# print(operations[0](5, 3))  # 8 (addition)
+# print(operations[1](5, 3))  # 2 (subtraction)
 
 # # %%%%%%%%%%%%%%%%%%%%% #
-# # --     SLIDE 58    -- #
+# # --     SLIDE 20    -- #
 # # %%%%%%%%%%%%%%%%%%%%% #
 
+# # standard function
+# def add(x, y):
+#     return x + y
+
+
+# print(add(1, 3))  # 4
+
+# lambda expression
 # add = lambda x, y: x + y
 # print(add(1, 3))  # 4
 
+# ------------------- #
+
+# # standard function
+# def double(x):
+#     return x * 2
+
+# print(double(2))  # 4
+
+# lambda expression
 # double = lambda x: x * 2
 # print(double(2))  # 4
 
 # # %%%%%%%%%%%%%%%%%%%%% #
-# # --     SLIDE 59    -- #
+# # --     SLIDE 21    -- #
 # # %%%%%%%%%%%%%%%%%%%%% #
-
 # import dis
 
 # # lambda expression
 # dis.dis(lambda x: x * 2)
 
-# print("-------------------")
+# print("--" * 20)
+
 
 # # standard function
 # def double(x):
@@ -144,14 +153,11 @@
 # dis.dis(double)
 
 # # %%%%%%%%%%%%%%%%%%%%% #
-# # --     SLIDE 60    -- #
+# # --     SLIDE 22    -- #
 # # %%%%%%%%%%%%%%%%%%%%% #
-
-# print((lambda x: x + 1)(2))  # 3
-# print((lambda x: assert x == 2)(2))  # SyntaxError
-# (lambda x: int: x + 1)(2)
-# print((lambda x: 
-#     x + 1)(2))
+# print((lambda x: x + 1)(2)) # 3
+# (lambda x: assert x == 2)(2) # SyntaxError: invalid syntax
+# print((lambda x: int: x + 1)(2) ) # SyntaxError: invalid syntax
 # print((lambda x, y, z: x + y + z)(1, 2, 3))  # Positional arguments
 # print((lambda x, y, z=3: x + y + z)(1, 2))  # Default arguments
 # print((lambda x, y, z: x + y + z)(1, z=2, y=2))  # Keyword arguments
@@ -159,31 +165,28 @@
 # print((lambda **kwargs: kwargs)(a=1, b=2, c=3))  # lambda with **kwargs
 
 # # %%%%%%%%%%%%%%%%%%%%% #
-# # --     SLIDE 62    -- #
+# # --     SLIDE 24    -- #
 # # %%%%%%%%%%%%%%%%%%%%% #
-
 # numbers = [1, 2, 3, 4, 5]
 # squared = list(map(lambda x: x**2, numbers))
 # print(squared)  # [1, 4, 9, 16, 25]
 
 # # %%%%%%%%%%%%%%%%%%%%% #
-# # --     SLIDE 63    -- #
+# # --     SLIDE 25    -- #
 # # %%%%%%%%%%%%%%%%%%%%% #
-
 # numbers = [1, 2, 3, 4, 5]
 # even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
 # print(even_numbers)  # [2, 4]
 
 # # %%%%%%%%%%%%%%%%%%%%% #
-# # --     SLIDE 64    -- #
+# # --     SLIDE 26    -- #
 # # %%%%%%%%%%%%%%%%%%%%% #
-
 # pairs = [(1, "b"), (3, "a"), (2, "c")]
 # sorted_pairs = sorted(pairs, key=lambda x: x[1])
 # print(sorted_pairs)  # [(3, 'a'), (1, 'b'), (2, 'c')]
 
 # # %%%%%%%%%%%%%%%%%%%%% #
-# # --     SLIDE 65    -- #
+# # --     SLIDE 27    -- #
 # # %%%%%%%%%%%%%%%%%%%%% #
 
 # from functools import reduce
@@ -193,7 +196,26 @@
 # print(total)  # 15
 
 # # %%%%%%%%%%%%%%%%%%%%% #
-# # --     SLIDE 68    -- #
+# # --     SLIDE 28    -- #
+# # %%%%%%%%%%%%%%%%%%%%% #
+# numbers = [1, 2, 3, 4, 5]
+# squared = [x ** 2 for x in numbers]
+# even_numbers = [x for x in numbers if x % 2 == 0]
+
+# print('--' * 20)
+
+# words = ["apple", "fig", "banana", "cherry"]
+# sorted_words = sorted(words, key=lambda word: len(word))
+# print(sorted_words)  # Output: ['fig', 'apple', 'banana', 'cherry']
+
+# print('--' * 20)
+
+# data = [("apple", 3), ("fig", 2), ("apple", 5), ("fig", 1)]
+# sorted_data = sorted(data, key=lambda x: (x[0], -x[1]))
+# print(sorted_data)  # [('apple', 5), ('apple', 3), ('fig', 2), ('fig', 1)]
+
+# # %%%%%%%%%%%%%%%%%%%%% #
+# # --     SLIDE 30    -- #
 # # %%%%%%%%%%%%%%%%%%%%% #
 # import tkinter as tk
 
@@ -213,3 +235,19 @@
 
 # # Run the Tkinter event loop
 # window.mainloop()
+
+# # %%%%%%%%%%%%%%%%%%%%% #
+# # --     SLIDE 27    -- #
+# # %%%%%%%%%%%%%%%%%%%%% #
+# # %%%%%%%%%%%%%%%%%%%%% #
+# # --     SLIDE 27    -- #
+# # %%%%%%%%%%%%%%%%%%%%% #
+# # %%%%%%%%%%%%%%%%%%%%% #
+# # --     SLIDE 27    -- #
+# # %%%%%%%%%%%%%%%%%%%%% #
+# # %%%%%%%%%%%%%%%%%%%%% #
+# # --     SLIDE 27    -- #
+# # %%%%%%%%%%%%%%%%%%%%% #
+# # %%%%%%%%%%%%%%%%%%%%% #
+# # --     SLIDE 27    -- #
+# # %%%%%%%%%%%%%%%%%%%%% #
