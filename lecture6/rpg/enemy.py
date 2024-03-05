@@ -1,7 +1,7 @@
 
 class Enemy:
 
-    def __init__(self, name="enemy", health=100):
+    def __init__(self, name="Enemy", health=50):
         self.name = name
         self.health = health
 

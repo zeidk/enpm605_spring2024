@@ -14,8 +14,8 @@ import random  # noqa: E402
 if __name__ == "__main__":
     # Create a player
     
-    player = Player("Link", 100)
-    enemy = Enemy("Ganon", 100)
+    player = Player("Link", 150)
+    enemy = Enemy("Ganon")
     game_action = [player.attack, enemy.attack]
     
     while player.health > 0:
