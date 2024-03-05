@@ -1,6 +1,4 @@
 
-
-
 @startuml
 namespace rpg #DDDDDD {
 class Player{
