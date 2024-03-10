@@ -3,7 +3,7 @@ This file contains the Player class.
 """
 
 import random
-from typing import Any
+from typing import Any, Union
 
 
 class Player:
@@ -80,7 +80,7 @@ class Player:
         else:
             raise TypeError("Unsupported operand types for >")
 
-    def __add__(self, other: int|"Player"):
+    def __add__(self, other: Union[int, "Player"]):
         """
         Adds the player's health to the other player's health or to the given amount.
 
