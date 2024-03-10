@@ -1,11 +1,27 @@
+"""
+This file contains the Enemy class.
+"""
 
 class Enemy:
+    """
+    A class representing an enemy in the game.
+
+    Attributes:
+        name (str): The name of the enemy.
+        health (int): The health of the enemy.
+    """
 
     def __init__(self, name="Enemy", health=50):
         self.name = name
         self.health = health
 
     def __str__(self):
+        """
+        Returns the string representation of the enemy.
+
+        Returns:
+            str: The string representation of the enemy.
+        """
         return f"{self.name} has {self.health} health."
 
 
