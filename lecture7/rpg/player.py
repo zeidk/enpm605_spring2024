@@ -1,5 +1,5 @@
 """
-This file contains the player class.
+This file contains the Player class.
 """
 
 import random
