@@ -16,8 +16,82 @@ class Player:
 
     """
     def __init__(self, name="Hero", health=100):
-        self.name = name
-        self.health = health
+        self._name = name
+        self._health = health
+
+    @property
+    def name(self):
+        """
+        The name of the player.
+        """
+        return self._name
+
+    # @property
+    # def name(self):
+    #     """
+    #     The name of the player.
+    #     """
+    #     raise AttributeError("Cannot read the name of the player.")
+    
+    @name.setter
+    def name(self, name):
+        raise AttributeError("Cannot change the name of the player.")
+
+    # @name.setter
+    # def name(self, name):
+    #     if isinstance(name, str):
+    #         self._name = name
+    #     else:
+    #         raise TypeError("Name must be a string")
+        
+    @name.deleter
+    def name(self):
+        del self._name
+    
+    @property
+    def health(self):
+        """
+        The health of the player.
+        """
+        return self._health
+    
+    @health.setter
+    def health(self, health):
+        if isinstance(health, int):
+            self._health = health
+        else:
+            raise TypeError("Health must be an integer")
+        
+    @health.deleter
+    def health(self):
+        del self._health
+
+    # def _get_name(self):
+    #     return self._name
+    
+    # def _get_health(self):
+    #     return self._health
+    
+    # def _del_name(self):
+    #     del self._name
+    
+    # def _set_name(self, name):
+    #     if isinstance(name, str):
+    #         self._name = name
+    #     else:
+    #         raise TypeError("Name must be a string")
+
+    # def _set_health(self, health):
+    #     if isinstance(health, int):
+    #         self._health = health
+    #     else:
+    #         raise TypeError("Health must be an integer")
+    
+    # def _del_health(self):
+    #     del self._health
+    
+    # name = property(fget=_get_name, fset=_set_name, fdel=_del_name, doc="The name of the player.")
+    # health = property(fget=_get_health, fset=_set_health, fdel=_del_health, doc="The health of the player.")
 
     def __str__(self):
         """
@@ -27,6 +101,11 @@ class Player:
             str: The string representation of the player.
         """
         return f"{self.name} has {self.health} health."
+    
+    def __repr__(self):
+        """
+        Returns the string representation of the player.
+        """
 
     def __iter__(self):
         """
@@ -141,7 +220,43 @@ class Player:
                 print(f"🤴💚 {self.name} has {self.health} health left.")
 
 
+    @classmethod
+    def create_players(cls):
+        """
+        Create a list of players.
+
+        Returns:
+            list[Player]: A list of players.
+        """
+        return [cls("Player 1", 100), cls("Player 2", 100)]
+    
+    # Create a super player
+    @classmethod
+    def create_super_player(cls):
+        """
+        Create a super player.
+
+        Returns:
+            Player: A super player.
+        """
+        return cls("Super Player", 1000)
+
+    @staticmethod
+    def is_valid_player_name(name):
+        """
+        Check if the provided name is a valid player name.
+
+        Args:
+            name (str): The name to check.
+
+        Returns:
+            bool: True if valid, False otherwise.
+        """
+        return isinstance(name, str) and len(name) > 3
+    
 if __name__ == "__main__":
-    arthur = Player("Arthur")
-    arthur.health = "hello"
-    arthur.take_damage(50)
+    name = "Joe"
+    print(Player.is_valid_player_name(name))  # False
+    name = "Jack"
+    print(Player.is_valid_player_name(name))  # True
+
