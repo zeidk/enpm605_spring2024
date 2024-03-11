@@ -27,7 +27,3 @@ class Circle(Shape):
 circle = Circle(5)
 # print(circle.area())  # 78.5
 # print(circle.perimeter())  # 31.4
-
-# rectangle = Rectangle(4, 6)
-# print(rectangle.area())  # 24
-# print(rectangle.perimeter())  # 20
