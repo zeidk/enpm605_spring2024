@@ -1,5 +1,5 @@
 
-
+import rpg.player 
 """
 This file contains the Enemy class.
 """
@@ -35,7 +35,7 @@ class Enemy():
         """
         return f"{self.name} has {self.health} health."
 
-    def attack(self, player, damage):
+    def attack(self, player: rpg.player.Player, damage):
         """
         Attack the player.
 
@@ -93,7 +93,7 @@ class Dragon(Enemy):
         super().__init__(name=name, health=80)
         self._fire_breath_power = fire_breath_power
 
-    def attack(self, player, damage):
+    def attack(self, player: rpg.player.Player, damage):
         """
         Attack the player.
 
@@ -107,3 +107,4 @@ class Dragon(Enemy):
 if __name__ == "__main__":
     print("Creating an enemy:")
     enemy = Enemy()
+    enemy.attack(rpg.player.Player(), 10)
