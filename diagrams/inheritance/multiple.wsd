@@ -1,6 +1,0 @@
-@startuml
-title Multiple inheritance
-class Derived extends Base1
-class Derived extends Base2
-
-@enduml
