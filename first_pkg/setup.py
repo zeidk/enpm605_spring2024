@@ -20,8 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'minimal_node = first_pkg.minimal_node:main',
-            'advanced_node = first_pkg.advanced_node:main',
+            'minimal_node = first_pkg.minimal_node_demo:main',
+            'advanced_node = first_pkg.advanced_node_demo:main',
         ],
     },
 )
